@@ -358,42 +358,15 @@
         <hr class="mdc-list-divider">
       </header>
       <section id="mdc-dialog-default-description" class="mdc-dialog__body">
-        <pre>
-{noformat}
-Admin: Admin 3
-Brink Version: 4.1.131
-Replicated on version 4.1.171
-Clarify: {{Clarify Case Number}} {{NEEDS TO BE ADDED TO HTML}}
-{noformat}
+          <h1 class="mdc-typography--display1" id="dialog-error">Something went horribly wrong. You shouldn't be seeing this...</h1>
+<pre id="jira-format-text">
 
-
-h2. All Affected Locations
-||{color:#333333}Portal{color}||{color:#333333}Group Name{color}||{color:#333333}Location Name{color}||{color:#333333}Location ID{color}||
-|Admin 3|123456|123456|123456123456123456123456123456123456123456|
-
-
-h2. Bug Details
-{panel:title=Bug Description|titleBGColor=#e0c398}
-123456123456
-{panel}
-
-{panel:title=Bug Replication Steps|titleBGColor=#ff6347}
-123456123456
-{panel}
-
-{panel:title=Current Behavior|titleBGColor=#ff7f50}
-  123456123456
-{panel}
-
-{panel:title=Expected Behavior|titleBGColor=#90ee90}
-  123456123456
-{panel}
 </pre>
 <hr class="mdc-list-divider">
       </section>
       <footer class="mdc-dialog__footer">
-        <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Done</button>
-        <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Done</button>
+        <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Copy</button>
+        <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Close</button>
         
       </footer>
     </div>
@@ -405,8 +378,8 @@ h2. Bug Details
 
 
 
-  <!-- <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script> -->
-  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+  <script src="node_modules/material-components-web/dist/material-components-web.min.js"></script>
   <script>window.mdc.autoInit();</script>
   <script src="format.js"></script>
 

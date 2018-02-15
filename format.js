@@ -1,5 +1,16 @@
 // Instantiate the JS to the HTML elements and store
-
+function resetForms() {
+    var root = document.getElementById('dropdown-admin-portal');
+    var root2 = document.getElementById('dropdown-brink-version');
+    var root3 = document.getElementById('dropdown-replicate-version');
+    var root4 = document.getElementById('textField-concept-name');
+    var root5 = document.getElementById('textField-location-name');
+    var root6 = document.getElementById('textField-location-id');
+    var root7 = document.getElementById('bug-details');
+    var root8 = document.getElementById('bug-replication');
+    var root9 = document.getElementById('current-behavior');
+    var root10 = document.getElementById('expected-behavior');
+}
 
 function initialLoad() {    
     var root = document.getElementById('dropdown-admin-portal');
@@ -34,9 +45,7 @@ function initialLoad() {
 
     var dialog = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-default'));
 
-    var dialogContent = document.getElementById('mdc-dialog-default-description');
-    console.log(dialogContent.innerHTML);
-
+    var dialogContent = document.getElementById('jira-format-text');
 
     function getAdminPortal() {
         var item = adminPortal.selectedOptions[0];
@@ -97,12 +106,13 @@ function initialLoad() {
         return rawText;
     }
 
-    
+    function setDialogText(dialogText) {
+        document.getElementById('dialog-error').innerText = '';
+        document.getElementById('jira-format-text').innerText = dialogText;
+    }
 
 
     document.getElementById('submit-button').addEventListener('click', function(evt) {
-        console.log("BUTTON PRESSED");
-
         var _adminPortal = getAdminPortal();
         var _brinkVersion = getBrinkVersion();
         var _replicateVersion = getReplicateVersion();
@@ -114,34 +124,33 @@ function initialLoad() {
         var _locationName = getLocationName();
         var _locationID = getLocationID();
         
+        
+        
         var finalString = ` 
-        {noformat}
-        Brink Version: ${_brinkVersion.trim()}
-        Replicated on version ${_replicateVersion.trim()}
-        {noformat}
-        
-        
-        h2. All Affected Locations
-        ||{color:#333333}Portal{color}||{color:#333333}Group Name{color}||{color:#333333}Location Name{color}||{color:#333333}Location ID{color}||
-        |${_adminPortal.trim()}|${_conceptName.trim()}|${_locationName.trim()}|${_locationID.trim()}|
-        
-        
-        h2. Bug Details
-        {panel:title=Bug Description|titleBGColor=#e0c398}
-        ${_bugDetails.trim()}
-        {panel}
-        
-        {panel:title=Bug Replication Steps|titleBGColor=#ff6347}
-        ${_bugReplication.trim()}
-        {panel}
-        
-        {panel:title=Current Behavior|titleBGColor=#ff7f50}
-         ${_currentBehavior.trim()}
-        {panel}
-        
-        {panel:title=Expected Behavior|titleBGColor=#90ee90}
-          ${_expectedBehavior.trim()}
-        {panel}`;
+{noformat}
+Brink Version: ${_brinkVersion.trim()}
+Replicated on version ${_replicateVersion.trim()}
+{noformat}
+
+h2. All Affected Locations
+||{color:#333333}Portal{color}||{color:#333333}Group Name{color}||{color:#333333}Location Name{color}||{color:#333333}Location ID{color}||
+|${_adminPortal.trim()}|${_conceptName.trim()}|${_locationName.trim()}|${_locationID.trim()}|
+
+h2. Bug Details
+{panel:title=Bug Description|titleBGColor=#e0c398}
+${_bugDetails.trim()}
+{panel}
+{panel:title=Bug Replication Steps|titleBGColor=#ff6347}
+${_bugReplication.trim()}
+{panel}
+{panel:title=Current Behavior|titleBGColor=#ff7f50}
+    ${_currentBehavior.trim()}
+{panel}
+{panel:title=Expected Behavior|titleBGColor=#90ee90}
+    ${_expectedBehavior.trim()}
+{panel}`;
+
+        setDialogText(finalString);
 
         dialog.lastFocusedTarget = evt.target;
         dialog.show();
