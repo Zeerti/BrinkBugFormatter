@@ -150,12 +150,12 @@ html{
 }
 
 .mdc-dialog__surface {
-    min-width: 50vw !important; 
+    /* min-width: 50vw !important;  */
     min-height: 500px !important;
 }
 
 .mdc-dialog__body {
-    padding: 0 24px 0px
+    padding: 0 24px 200px
 }
 
 

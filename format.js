@@ -47,6 +47,8 @@ function initialLoad() {
 
     var dialogContent = document.getElementById('jira-format-text');
 
+
+
     function getAdminPortal() {
         var item = adminPortal.selectedOptions[0];
         return item.textContent;
@@ -108,7 +110,7 @@ function initialLoad() {
 
     function setDialogText(dialogText) {
         document.getElementById('dialog-error').innerText = '';
-        document.getElementById('jira-format-text').innerText = dialogText;
+        document.getElementById('clipboard').innerHTML = dialogText;
     }
 
 
@@ -123,9 +125,7 @@ function initialLoad() {
         var _bugReplication = getBugReplication();
         var _locationName = getLocationName();
         var _locationID = getLocationID();
-        
-        
-        
+            
         var finalString = ` 
 {noformat}
 Brink Version: ${_brinkVersion.trim()}
@@ -156,6 +156,16 @@ ${_bugReplication.trim()}
         dialog.show();
     });
 };
+
+// Function to setup the clipboard.
+var clipboard = new Clipboard('.clipboard');
+clipboard.on('success', function(e) {
+    console.log(e);
+});
+
+clipboard.on('error', function(e) {
+    console.log(e);
+});
 
 // Ensure HTML objects have their JS counterparts instantiated for Material Components
 initialLoad();
