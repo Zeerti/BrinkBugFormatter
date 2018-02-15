@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Brink Bug Formatter</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/material-components-web/dist/material-components-web.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+
+<body class="mdc-typography"> 
+  <div id="background-top-stripe"></div>
+  <main>
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell"></div>
+        <div class="mdc-layout-grid__cell--span1">
+          <div class="mdc-card mdc-elevation--z10" id="primary-card">
+            <div id="card-accent-stripe"></div>
+            
+            <!-- Card title -->
+            <div id="card-title-content">
+              <h1 class="mdc-typography--display2">Brink Bug Form</h1>
+              <span class="mdc-typography--caption">Fill out the following form and press the button below to create a bug case</span>
+              <hr>
+            </div>
+      
+            <!-- Begin Primary Card Content -->
+            <h1 class="mdc-typography--headline">The Server</h1>
+            <span class="mdc-typography--caption">We just need a few details about the server with the bug</span>
+
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-select dropdown-admin-portal mdc-layout-grid__cell--span-12" id="dropdown-admin-portal" role="listbox">
+                    <div class="mdc-select__surface" tabindex="0">
+                      <div class="mdc-select__label">Which admin server are they on?</div>
+                      <div class="mdc-select__selected-text"></div>
+                      <div class="mdc-select__bottom-line"></div>
+                    </div>
+                    <div class="mdc-menu mdc-select__menu">
+                      <ul class="mdc-list mdc-menu__items">
+                        <li class="mdc-list-item" role="option" tabindex="0">
+                          Admin 1
+                        </li>
+                        <li class="mdc-list-item" role="option" tabindex="0">
+                          Admin 2
+                        </li>
+                        <li class="mdc-list-item" role="option" tabindex="0">
+                          Admin 3
+                        </li>
+                        <li class="mdc-list-item" role="option" tabindex="0">
+                          Admin 4
+                        </li>
+                        <li class="mdc-list-item" role="option" tabindex="0">
+                          Admin 5
+                        </li>
+                        <li class="mdc-list-item" role="option" tabindex="0">
+                          Admin 6
+                        </li>
+                        <li class="mdc-list-item" role="option" tabindex="0">
+                          Admin 7
+                        </li>
+                        <li class="mdc-list-item" role="option" tabindex="0">
+                          Admin 8
+                        </li>
+                        <li class="mdc-list-item" role="option" tabindex="0">
+                          Admin 9
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                
+                  
+              
+                  <div class="mdc-select dropdown-brink-version mdc-layout-grid__cell--span-12" id="dropdown-brink-version" role="listbox">
+                    <div class="mdc-select__surface" tabindex="0">
+                      <div class="mdc-select__label">What version of Brink is the site running?</div>
+                      <div class="mdc-select__selected-text"></div>
+                      <div class="mdc-select__bottom-line"></div>
+                    </div>
+                    <div class="mdc-menu mdc-select__menu">
+                      <ul class="mdc-list mdc-menu__items">
+                        <li class="mdc-list-item" role="option" tabindex="0">
+                          4.1.1039
+                        </li>
+                        <li class="mdc-list-item" role="option" tabindex="0">
+                          4.1.131
+                        </li>
+                        <li class="mdc-list-item" role="option" tabindex="0">
+                          4.1.171
+                        </li>
+                        <li class="mdc-list-item" role="option" tabindex="0">
+                          4.1.178
+                        </li>
+                        <li class="mdc-list-item" role="option" tabindex="0">
+                          4.1.3146
+                        </li>
+                        <li class="mdc-list-item" role="option" tabindex="0">
+                          4.1.4121
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+            
+                  <div class="mdc-select dropdown-brink-version mdc-layout-grid__cell--span-12" id="dropdown-replicate-version" role="listbox" id="dropdown-bug-version">
+                      <div class="mdc-select__surface" tabindex="0">
+                        <div class="mdc-select__label">What version did you replicate the bug on?</div>
+                        <div class="mdc-select__selected-text"></div>
+                        <div class="mdc-select__bottom-line"></div>
+                      </div>
+                      <div class="mdc-menu mdc-select__menu">
+                        <ul class="mdc-list mdc-menu__items">
+                          <li class="mdc-list-item" role="option" tabindex="0">
+                            4.1.1039
+                          </li>
+                          <li class="mdc-list-item" role="option" tabindex="0">
+                            4.1.131
+                          </li>
+                          <li class="mdc-list-item" role="option" tabindex="0">
+                            4.1.171
+                          </li>
+                          <li class="mdc-list-item" role="option" tabindex="0">
+                            4.1.178
+                          </li>
+                          <li class="mdc-list-item" role="option" tabindex="0">
+                            4.1.3146
+                          </li>
+                          <li class="mdc-list-item" role="option" tabindex="0">
+                            4.1.4121
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+
+            </div>
+            
+
+            
+
+              
+      
+            <!-- Location Details -->
+            <h2 class="mdc-typography--headline">The Location</h2>
+            <span class="mdc-typography--caption">Lets put the store information in, we're going to need it</span>
+            <div id="card-detail-content">
+              <div class="mdc-layout-grid__inner">
+                  <div class="mdc-text-field mdc-text-field--outlined mdc-layout-grid__cell--span-11" id="textField-concept-name" >
+                      <input class="mdc-text-field__input" id="concept-name" type="text" required minlength=4>
+                      <label class="mdc-text-field__label" for="concept-name">Store Concept Name</label>
+                      <div class="mdc-text-field__outline">
+                        <svg>
+                          <path class="mdc-text-field__outline-path"/>
+                        </svg>
+                      </div>
+                      <div class="mdc-text-field__idle-outline"></div>
+                    </div>
+                      <p class="mdc-text-field-helper-text mdc-layout-grid__cell--span-12" aria-hidden="true">
+                          Provide the name exactly as it is displayed on the admin portal
+                      </p>
+                    
+                    
+            
+                    <div class="mdc-text-field mdc-text-field--outlined mdc-layout-grid__cell--span-11" id="textField-location-name" >
+                      <input class="mdc-text-field__input" id="location-name" type="text" required minlength=4>
+                      <label class="mdc-text-field__label" for="location-name">Specific Store Name</label>
+                      <div class="mdc-text-field__outline">
+                        <svg>
+                          <path class="mdc-text-field__outline-path"/>
+                        </svg>
+                      </div>
+                      <div class="mdc-text-field__idle-outline"></div>
+                    </div>
+                      <p class="mdc-text-field-helper-text mdc-layout-grid__cell--span-12" aria-hidden="true">
+                          Provide the name exactly as it is displayed on the admin portal
+                      </p>
+                      <div class="placeholder mdc-layout-grid__cell mdc-layout-grid__cell--span-4"></div>  
+                      
+                      
+                    <div class="placeholder mdc-layout-grid__cell mdc-layout-grid__cell--span-1"></div>
+                    <div class="mdc-text-field mdc-text-field--outlined mdc-layout-grid__cell--span-9" id="textField-location-id">
+                      <input class="mdc-text-field__input" id="location-id" type="text" required minlength=36>
+                      <label class="mdc-text-field__label" for="location-id">Location ID</label>
+                      <div class="mdc-text-field__outline">
+                        <svg>
+                          <path class="mdc-text-field__outline-path"/>
+                        </svg>
+                      </div>
+                      <div class="mdc-text-field__idle-outline"></div>
+                    </div>
+                    <p class="mdc-text-field-helper-text mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--order-2" aria-hidden="true">
+                        Located under details in the dropdown on the admin portal
+                    </p>
+                    <div class="placeholder mdc-layout-grid__cell mdc-layout-grid__cell--span-2 mdc-layout-grid__cell--order-1"></div>
+                    
+                    <div class="placeholder mdc-layout-grid__cell mdc-layout-grid__cell--span-3"></div>
+                    <button class="mdc-button mdc-button--stroked thick-stroke-button mdc-layout-grid__cell mdc-layout-grid__cell--span-5 mdc-layout-grid__cell--order-4" id="add-locations" data-mdc-auto-init="MDCRipple">
+                        Add another location
+                    </button>
+              </div>
+          </div>
+      
+          
+      
+          <h2 class="mdc-typography--headline">The Details</h2>
+          <span class="mdc-typography--caption">Lets dig into the nitty gritty of this problem</span>
+          <div >
+            <div class="mdc-text-field--textarea" id="bug-details">
+                <textarea id="textarea" class="mdc-text-field__input" rows="8" cols="40" required minlength=12></textarea>
+                <label for="textarea" class="mdc-text-field__label">What is the bug?</label>
+            </div>
+
+          </div>
+         
+          <div>
+            <div class="mdc-text-field--textarea" id="bug-replication">
+                <textarea id="textarea" class="mdc-text-field__input" rows="8" cols="40" required minlength=12></textarea>
+                <label for="textarea" class="mdc-text-field__label">How do you replicate the bug?</label>
+            </div>
+          </div>
+
+          <div>
+            <div class="mdc-text-field--textarea" id="current-behavior">
+                <textarea id="textarea" class="mdc-text-field__input" rows="4" cols="40" required minlength=12></textarea>
+                <label for="textarea" class="mdc-text-field__label">What is the current behavior?</label>
+            </div>
+          </div>
+
+          <div>
+            <div class="mdc-text-field--textarea" id="expected-behavior">
+                <textarea id="textarea" class="mdc-text-field__input" rows="4" cols="40" required minlength=12></textarea>
+                <label for="textarea" class="mdc-text-field__label">What is the expected behavior?</label>
+            </div>
+          </div>
+
+          
+      
+          <h2 class="mdc-typography--headline">Miscellaneous Details</h2>
+          <span class="mdc-typography--caption">Check all that apply to the bug you are reporting</span>
+          
+          <!-- Being CheckBoxes for Misc options. -->
+          <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+              <div class="mdc-layout-grid__cell">
+                <div class="mdc-form-field ">
+                    <div class="mdc-checkbox">
+                      <input type="checkbox"
+                              id="checkbox-emv"
+                              class="mdc-checkbox__native-control"/>
+                      <div class="mdc-checkbox__background">
+                        <svg class="mdc-checkbox__checkmark"
+                              viewBox="0 0 24 24">
+                          <path class="mdc-checkbox__checkmark-path"
+                                fill="none"
+                                stroke="white"
+                                d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                        </svg>
+                        <div class="mdc-checkbox__mixedmark"></div>
+                      </div>
+                    </div>
+                    <label for="checkbox-emv">EMV Related</label>
+                  </div>
+              </div>
+      
+              <div class="mdc-layout-grid__cell--span-4">
+                <div class="mdc-form-field ">
+                    <div class="mdc-checkbox">
+                      <input type="checkbox"
+                              id="checkbox-3rd-party"
+                              class="mdc-checkbox__native-control"/>
+                      <div class="mdc-checkbox__background">
+                        <svg class="mdc-checkbox__checkmark"
+                              viewBox="0 0 24 24">
+                          <path class="mdc-checkbox__checkmark-path"
+                                fill="none"
+                                stroke="white"
+                                d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                        </svg>
+                        <div class="mdc-checkbox__mixedmark"></div>
+                      </div>
+                    </div>
+                    <label for="checkbox-3rd-party">3rd Party Partner</label>
+                  </div>
+                </div>
+      
+                <div class="mdc-layout-grid__cell">
+                  <div class="mdc-form-field ">
+                    <div class="mdc-checkbox">
+                      <input type="checkbox"
+                        id="checkbox-cc"
+                        class="mdc-checkbox__native-control"/>
+                      <div class="mdc-checkbox__background">
+                        <svg class="mdc-checkbox__checkmark"
+                                viewBox="0 0 24 24">
+                          <path class="mdc-checkbox__checkmark-path"
+                                fill="none"
+                                stroke="white"
+                                d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                        </svg>
+                        <div class="mdc-checkbox__mixedmark"></div>
+                      </div>
+                    </div>
+                    <label for="checkbox-cc">CC/GC Problems</label>
+                  </div>
+                </div>
+      
+                <div class="mdc-layout-grid__cell">
+                    <div class="mdc-form-field ">
+                      <div class="mdc-checkbox">
+                        <input type="checkbox"
+                          id="checkbox-api"
+                          class="mdc-checkbox__native-control"/>
+                        <div class="mdc-checkbox__background">
+                          <svg class="mdc-checkbox__checkmark"
+                                  viewBox="0 0 24 24">
+                            <path class="mdc-checkbox__checkmark-path"
+                                  fill="none"
+                                  stroke="white"
+                                  d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                          </svg>
+                          <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                      </div>
+                      <label for="checkbox-api">API</label>
+                    </div>
+                  </div>
+            </div>
+          </div>
+      
+      </div>
+      </div>
+    </div>
+    <button class="mdc-fab material-icons app-fab--absolute mdc-ripple-surface" id="submit-button"  aria-label="Favorite" data-mdc-auto-init="MDCRipple">
+        <i class="material-icons">&#xE150;</i>
+      </button>
+
+<!--  -->
+      
+<div class="demo-body">
+  <aside id="mdc-dialog-default"
+         class="mdc-dialog"
+         role="alertdialog"
+         aria-hidden="true"
+         aria-labelledby="mdc-dialog-default-label"
+         aria-describedby="mdc-dialog-default-description">
+    <div class="mdc-dialog__surface">
+      <header class="mdc-dialog__header">
+        <h2 id="mdc-dialog-default-label" class="mdc-dialog__header__title">
+          Copy and Paste into JIRA
+        </h2> 
+        <hr>
+        <hr class="mdc-list-divider">
+      </header>
+      <section id="mdc-dialog-default-description" class="mdc-dialog__body">
+        <pre>
+{noformat}
+Admin: Admin 3
+Brink Version: 4.1.131
+Replicated on version 4.1.171
+Clarify: {{Clarify Case Number}} {{NEEDS TO BE ADDED TO HTML}}
+{noformat}
+
+
+h2. All Affected Locations
+||{color:#333333}Portal{color}||{color:#333333}Group Name{color}||{color:#333333}Location Name{color}||{color:#333333}Location ID{color}||
+|Admin 3|123456|123456|123456123456123456123456123456123456123456|
+
+
+h2. Bug Details
+{panel:title=Bug Description|titleBGColor=#e0c398}
+123456123456
+{panel}
+
+{panel:title=Bug Replication Steps|titleBGColor=#ff6347}
+123456123456
+{panel}
+
+{panel:title=Current Behavior|titleBGColor=#ff7f50}
+  123456123456
+{panel}
+
+{panel:title=Expected Behavior|titleBGColor=#90ee90}
+  123456123456
+{panel}
+</pre>
+<hr class="mdc-list-divider">
+      </section>
+      <footer class="mdc-dialog__footer">
+        <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Done</button>
+        <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Done</button>
+        
+      </footer>
+    </div>
+    <div class="mdc-dialog__backdrop"></div>
+  </aside>
+<!--  -->
+
+  </main>
+
+
+
+  <!-- <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script> -->
+  <script src="/node_modules/material-components-web/dist/material-components-web.js"></script>
+  <script>window.mdc.autoInit();</script>
+  <script src="/format.js"></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+<!-- MIMIC THIS CASE -->
+<!-- https://devops.partech.com/jira/browse/BBS-2048 -->
+<!-- Current Idea -->
+<!-- https://devops.partech.com/jira/browse/BBS-2094 -->
+
+
+
+
+

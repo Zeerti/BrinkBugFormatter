@@ -1,0 +1,166 @@
+html{
+    padding: 0;
+    margin: 0;
+    background-color: #00447c;
+    overflow-x: hidden;
+}
+
+:root {
+    --mdc-theme-primary: #00447c;
+    --mdc-theme-secondary: #e0c398; 
+}
+
+.mdc-card {
+    /* height: 100vh; */
+    /* max-width: 25%; */
+    min-width: 800px;
+    /* max-height: 100vh; */
+  }
+
+#background-top-stripe {
+    background-color: #e0c398;
+    min-height: 50px;
+    padding: 20px;
+    margin: -10px;
+    overflow: hidden;
+}
+
+#primary-card {
+    /* margin-left: 35%; */
+    margin-top: -80px;
+    
+}
+
+#card-accent-stripe {
+    background-color: #456fac;
+    width: 100%;
+    height: 7px;
+    padding-top: 1px;
+}
+
+#card-title-content {
+    margin-left: 40px;
+    
+}
+
+#card-title-content > h1 {
+    margin-bottom: 8px;
+}
+
+#card-title-content > span {
+    margin-left: 2px;
+}
+
+#card-detail-content {
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+#card-title-content > hr {
+    margin-left: -40px;
+    padding: 0;
+}
+
+.mdc-select {
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: .04em;
+}
+
+.dropdown-admin-portal {
+    margin: 5px 100px 10px 70px;
+}
+
+.dropdown-brink-version {
+    margin: 0px 100px 10px 70px;
+}
+
+#concept-name {
+    min-width: 500px;
+    
+}
+
+#location-name {
+    min-width: 500px;
+}
+
+#location-id {
+    min-width: 350px;
+}
+
+.mdc-text-field--outlined {
+    margin-bottom: -0px;
+    margin-top: 8px !important;
+}
+
+.mdc-text-field-helper-text {
+    margin-bottom: -50px;
+}
+
+.mdc-typography--headline {
+    margin-left: 40px;
+}
+
+.mdc-typography--caption {
+    margin-left: 42px;
+    margin-top: -17px;
+    color: #456fac;
+}
+
+.mdc-layout-grid{
+    margin-left: 10px;
+}
+
+.mdc-text-field--textarea {
+    max-width: 750px;
+    min-width: 750px;
+    margin-left: 25px;
+}
+
+.app-fab--absolute {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    min-width: 80px;
+    min-height: 80px;
+  }
+  
+  @media(min-width: 1024px) {
+     .app-fab--absolute {
+      bottom: 1.5rem;
+      right: 1.5rem;
+    }
+  }
+#submit-button > .material-icons {
+    font-size: 60px;
+    color: black;
+}
+
+#add-locations > .material-icons {
+    display: inline-block; 
+    text-align: center;
+    vertical-align: middle;
+    font-size: 32px;
+    color: white;
+}
+
+#add-locations {
+    background-color: #E6F0FF;
+}
+
+.mdc-dialog__surface {
+    min-width: 50vw !important; 
+    min-height: 500px !important;
+}
+
+.mdc-dialog__body {
+    padding: 0 24px 0px
+}
+
+
+
+
+
+
+
