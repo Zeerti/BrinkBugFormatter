@@ -172,47 +172,26 @@ initialLoad();
 
 
 
+const button = document.getElementById("add-locations"); //Button to trigger JS
+const node = document.getElementById('locations-wrapper') //Direct Div Parent element for Inputs
+const nodeWrapper = document.getElementById('locations-outer-wrapper')
 
+button.addEventListener('click', function() {
+    const count = document.querySelector('[class="locations-wrapper"]');
+    
+    const newNode = node.cloneNode(true);
+    setIds(newNode.querySelector("#textField-concept-name"), count);
+    setIds(newNode.querySelector("#textField-location-name"), count);
+    setIds(newNode.querySelector("#textField-location-id"), count);
 
+    nodeWrapper.appendChild(newNode);
+    console.log(newNode);
 
+});
 
-
-
-
-
-
-
-
-
-
-
-/* <section class="example">
-<h2 class="mdc-typography--title">Fully-Featured JS Component</h2>
-<section id="demo-wrapper">
-  <div id="js-select" class="mdc-select" role="listbox">
-    <div class="mdc-select__surface" tabindex="0">
-      <div class="mdc-select__label">Food Group</div>
-      <div class="mdc-select__selected-text"></div>
-      <div class="mdc-select__bottom-line"></div>
-    </div>
-    <div class="mdc-menu mdc-select__menu">
-      <ul class="mdc-list mdc-menu__items">
-        <li class="mdc-list-item" role="option" id="fruit-roll-ups" tabindex="0">
-          Fruit Roll Ups
-        </li>
-        <li class="mdc-list-item" role="option" id="cotton-candy" tabindex="0">
-          Candy (cotton)
-        </li>
-        <li class="mdc-list-item" role="option" id="vegetables" aria-disabled="true" tabindex="0">
-          Vegetables
-        </li>
-        <li class="mdc-list-item" role="option" id="noodles" tabindex="0">
-          Noodles
-        </li>
-      </ul>
-    </div>
-  </div>
-</section> */
+function setIds(node, count) {
+    node.id = `${node.id}-${count}`;
+}
 
 
 

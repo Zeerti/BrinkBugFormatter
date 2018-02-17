@@ -145,7 +145,8 @@
             <h2 class="mdc-typography--headline">The Location</h2>
             <span class="mdc-typography--caption">Lets put the store information in, we're going to need it</span>
             <div id="card-detail-content">
-              <div class="mdc-layout-grid__inner">
+              <div class="mdc-layout-grid__inner " id="locations-outer-wrapper">
+                <div id="locations-wrapper">
                   <div class="mdc-text-field mdc-text-field--outlined mdc-layout-grid__cell--span-11" id="textField-concept-name" >
                       <input class="mdc-text-field__input" id="concept-name" type="text" required minlength=4>
                       <label class="mdc-text-field__label" for="concept-name">Store Concept Name</label>
@@ -156,12 +157,11 @@
                       </div>
                       <div class="mdc-text-field__idle-outline"></div>
                     </div>
-                      <p class="mdc-text-field-helper-text mdc-layout-grid__cell--span-12" aria-hidden="true">
+                      <p class="mdc-text-field-helper-text mdc-layout-grid__cell--span-11 mdc-layout-grid__cell--order-3" aria-hidden="true">
                           Provide the name exactly as it is displayed on the admin portal
                       </p>
+                      <div class="mdc-layout-grid__cell--span-1 mdc-layout-grid__cell--order-2"></div>  
                     
-                    
-            
                     <div class="mdc-text-field mdc-text-field--outlined mdc-layout-grid__cell--span-11" id="textField-location-name" >
                       <input class="mdc-text-field__input" id="location-name" type="text" required minlength=4>
                       <label class="mdc-text-field__label" for="location-name">Specific Store Name</label>
@@ -195,8 +195,9 @@
                     <div class="placeholder mdc-layout-grid__cell mdc-layout-grid__cell--span-2 mdc-layout-grid__cell--order-1"></div>
                     
                     <div class="placeholder mdc-layout-grid__cell mdc-layout-grid__cell--span-3"></div>
-                    
+                  </div>
               </div>
+
               <button class="mdc-button mdc-button--stroked thick-stroke-button mdc-layout-grid__cell mdc-layout-grid__cell--span-5 mdc-layout-grid__cell--order-4" id="add-locations" data-mdc-auto-init="MDCRipple">
                   Add another location
               </button>
